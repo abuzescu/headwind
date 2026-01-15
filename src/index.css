@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #202225;
+  --color-secondary: #5865f2;
+  --gray-900: #202225;
+  --gray-800: #2f3136;
+  --gray-700: #36393f;
+  --gray-600: #4f545c;
+  --gray-400: #d4d7dc;
+  --gray-300: #e3d5e8;
+  --gray-200: #ebedef;
+  --gray-100: #f2f3f5;
+}
+
+@utility sidebar-icon{
+  @apply relative flex items-center justify-center
+          h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+          bg-gray-800 text-green-500
+          rounded-3xl
+          transition-all;
+  &:hover {
+    @apply bg-green-600 text-white rounded-xl;
+  }
+}
+
+@utility sidebar-tooltip {
+  @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md
+          shadow-md text-white bg-gray-900
+          text-xs font-bold
+          transition-all duration-100 scale-0 origin-left;
+}
